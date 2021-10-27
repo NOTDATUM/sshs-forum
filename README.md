@@ -51,35 +51,46 @@
     - parameters: none
 
 ### `post`
-- GET
-    - parameters: none
+- post
+    - parameters:
+    ```
+    title
+    body
+    author
+    views
+    numId
+    attachment
+    createdAt
+    updatedAt
     ```
 
+- comment
+    - parameters:
+    ```
+    post
+    author
+    parentComment
+    text
+    isDeleted
+    createdAt
+    updatedAt
     ```
 
-- PUT
-    - parameters: token
+- count
+    - parameters: 
     ```
-    token: 수정할 푸시알림 토큰
-    ```
-
-- DELETE
-    - delete the push notification token data of student with kyoId
-
-    - parameters: none
-
-    - returns:
-    ```
-    {
-        "status": "success" | false
-    }
+    name
+    count
     ```
 
-### `/push`
-- POST 
-    - parameters: kyoId, title, body
-    ```
-    kyoId: 푸시알림을 전송할 학생 교번 또는 교번 리스트
-    title: 푸시알림 title
-    body: 푸시알림 body
+- file
+    - parameters:
+    ``` 
+    originalFileName
+    serverFileId
+    serverFileName
+    size
+    uploadedBy
+    postId
+    isDeleted
     ```
